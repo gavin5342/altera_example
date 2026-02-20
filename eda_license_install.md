@@ -17,33 +17,34 @@ I like using a floating license even when it is hosted on the machine that I am 
 
 ## Update license file
  - open license file
- - Change <hostname> to my machine
- - Update <port number> to 1717
- - Update alterd <path to daemon executable> to where I installed the Quartus Flexlm
- - Add PORT=1719 to lock alterad to use port 1719, otherwise a random port is selected
- - Update mgcld <path to daemon executable> to where I installed Siemens daemon and change from VENDOR mgcld to DAEMON saltd.
- - Add PORT=1718 to lock alterad to use port 1719, otherwise a random port is selected
+ - Change `hostname` to my machine
+ - Update `port number` to 1717
+ - Update alterd `path to daemon executable` to where I installed the Quartus Flexlm
+ - Add `PORT=1719` on the `VENDOR alterad` line to lock alterad to use port 1719, otherwise a random port is selected
+ - Update mgcld `path to daemon executable` to where I installed Siemens daemon and change from VENDOR mgcld to DAEMON saltd.  **Note mgcld lines work with saltd**
+ - Add `PORT=1718` on the `VENDOR saltd` line to lock saltdd to use port 1719, otherwise a random port is selected
   **NB you don't need to change the feature lines from mgcld to saltd, just specifying the saltd daemon is enough**
- - First time - start lmgrd manually and check the log `<install>/lmgrd -c <location of edited license file : `/opt/altera/flexlm/lmgrd -c /opt/altera/licenses/LR-288134_License.dat` where `/opt/altera/flexlm` is where I chose to install the Altera Flexlm package and `LR-288134_License.dat` is the name of my license file
+ - First time - start lmgrd manually and check the log `${INSTALL DIR}/lmgrd -c ${LICENSE_FILE}
+On my machine: /opt/altera/flexlm/lmgrd -c /opt/altera/licenses/LR-288134_License.dat`
  - Need to create tmp file to resolve error the first time I run:
    `sudo mkdir /usr/tmp`
-   `sudo chown -R glofts:glofts /usr/tmp`
+   `sudo chown -R glofts:glofts /usr/tmp` (glofts is my user name on my PC, you could use whichever user will run `lmgrd`)
  - Check that licesnes are working from
-    `<install dir>/lmutil lmdiag -c 1717@<your hostname>` you can use `localhost` if you run in the same computer as lmgrd is running on
+    `${INSTALL_DIR}/lmutil lmdiag -c 1717@$(hostname)` you can use `localhost` if you run in the same computer as lmgrd is running on.
  - start Quartus while specifying the license server:
-   `export LM_LICENSE_FILE=1717@<hostname>`
+   `export LM_LICENSE_FILE=1717@$(hostname)`
     This line can be added to your `.bashrc` if you want it to always be set
  - In addition to `lmutil lmdiag`, you can use Tools -> License Setup in Quartus to check the features that are enabled
  - For Questa Altera FPGA Edition, SALT_LICENSE_SERVER must be specified instead
-   `export SALT_LICENSE_SERVER=1717@<hostname>`
+   `export SALT_LICENSE_SERVER=1717@$(hostname)`
    as above - add to your .bashrc if you want this to always be set
- - Run <questa location>/bin/vsim - you will get a message if the license cannot be checked out
+ - Run ${QUESTA INSTALL}/bin/vsim - you will get a message if the license cannot be checked out
  - Open TCP ports if you want other machines on your network to be able to use the licenses
   `sudo ufw allow 1717/tcp`
   `sudo ufw allow 1718/tcp`
   `sudo ufw allow 1719/tcp`
  - Add systemd service to start lmgrd every time I turn the computer on:
-   Add the text below to a file called `/usr/lib/systemd/system/lmgrd.service` (Replace <user> and <group> with the real user that you want these processes to run under.
+   Add the text below to a file called `/usr/lib/systemd/system/lmgrd.service` (Replace `user` and `group` with the real user that you want these processes to run under.
     ```
     [Unit]
     Description=FlexLM license daemon
