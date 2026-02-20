@@ -1,0 +1,3 @@
+[submodule "agilex5/agilex5e-ed-gsrd"]
+	path = agilex5/agilex5e-ed-gsrd
+	url = https://github.com/altera-fpga/agilex5e-ed-gsrd
