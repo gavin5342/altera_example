@@ -8,7 +8,7 @@ I like using a floating license even when it is hosted on the machine that I am 
  - Running without arguments opens the GUI
  - `--help` shows command line options.  Choose to use GUI.
  - After running the installer the normal flexlm executeables for altera and siemens are in the location that I selected
- - **Also need to download Siemens flexlm from the same donload page**
+ - **Also need to download Siemens flexlm from the same download page**
  - Execute as root: `sudo ./SiemensLicenseServer_v4.0.0.0_Lnx64_x86-64.bin`
  - LSB package missing - fix by adding a soft link to the new library: `sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3`
  - Skip Import licenses step
