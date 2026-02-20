@@ -1,4 +1,4 @@
-# Licensing
+# Altera Licensing
 
 I like using a floating license even when it is hosted on the machine that I am using as it allows me to transition to a cloud based docker executor more easily.
 
