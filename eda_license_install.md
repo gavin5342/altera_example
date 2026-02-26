@@ -2,6 +2,8 @@
 
 I like using a floating license even when it is hosted on the machine that I am using as it allows me to transition to a cloud based docker executor more easily.
 
+Altera also provides guidance in the [Licensing Support Center](https://www.intel.com/content/www/us/en/support/programmable/licensing/support-center.html)
+
 ## Install license server
  - Navigate to Utilities Flexlm License Daemons from [Downloads page](https://www.altera.com/downloads/utilities/flexlm-license-daemons-fpga-software)
  - Add exe permission `chmod +x FlexlmSetup-11.19.6.0-linux.run`
