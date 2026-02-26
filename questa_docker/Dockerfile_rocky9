@@ -1,0 +1,40 @@
+
+#retrieve rocky image.
+
+FROM rockylinux:9
+
+# Quartus version
+ARG QVER="25.3.1"
+ARG QBVER="100"
+
+# set locale 
+#ENV DEBIAN_FRONTEND=noninteractive \
+#    LANG=C.UTF-8 \
+#    LC_ALL=C.UTF-8
+
+#Update dnf
+RUN dnf update -y
+
+# install x11 for GUI and i386 for 32b DPI libc
+# vim because it's my favourite text editor
+# wget and ca-certificates to download installer
+RUN dnf install -y --setopt=install_weak_deps=False   \
+xterm glib2 \  
+vim-enhanced \
+wget  \
+ca-certificates \
+glibc.i686 glibc-devel.i686 libstdc++.i686 libstdc++-devel.i686   \
+gcc gcc-c++ libgcc.i686 && \
+update-ca-trust
+
+# Get installer
+ARG QINST=qinst-linux-${QVER}-${QBVER}.run
+RUN wget https://downloads.intel.com/akdlm/software/acdsinst/${QVER}/${QBVER}/qinst/${QINST} && \
+chmod +x ${QINST}
+
+## extract installer
+ARG INST_LOC="/opt/altera_inst"
+RUN ./${QINST} --target ${INST_LOC} --noexec
+
+# install Questa FPGA version (combine with above step later)
+RUN ${INST_LOC}/qinst.sh --cli --download-dir ./qdownload --delete-downloads --components questa_fe --auto-install --install-dir /opt/questa --accept-eula
