@@ -19,5 +19,7 @@ The only version of Ubuntu supported by Questa FPGA edition, but already out of 
 
 Rocky is a downstream rebuild of Red Hat Enterprise Linux with Red Hat IP removed.  CentOS was similar before Red Hat moved CentOS to upstream of RHEL.
 
-Coming soon
+ - Dockerfile_rocky9 a docker file that installs the dependencies to use Questa including GUI and then installs Questa from web installer
+ - `source build_image_rocky9.sh` builds a new image using Rocky 9 and Questa FPGA edition 25.3.1
+ - `source run_new_container_rocky9.sh` runs the image you build above in a new container 
 
