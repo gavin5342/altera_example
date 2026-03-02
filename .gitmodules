@@ -1,3 +1,6 @@
 [submodule "agilex5/agilex5e-ed-gsrd"]
 	path = agilex5/agilex5e-ed-gsrd
 	url = https://github.com/altera-fpga/agilex5e-ed-gsrd
+[submodule "agilex5/a5e013/baremetal-drivers"]
+	path = agilex5/a5e013/baremetal-drivers
+	url = https://github.com/altera-fpga/baremetal-drivers
