@@ -2,6 +2,8 @@
 
 These instructions are based on those for the 065 premium dev kit: [baremetal example](https://altera-fpga.github.io/rel-25.1/baremetal-embedded/agilex-5/e-series/premium/ug-baremetal-agx5e-premium/)
 
+The project is provided [here](./baremetal-example)
+
 ## Baremetal no DRAM boot flow
 
 I have concentrated on the boot flow where no DRAM is connected.  This is useful for people who have a small application that will fit in the 512KB OCRAM provided by the Agilex 5 HPS.
