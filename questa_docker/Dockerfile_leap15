@@ -1,0 +1,51 @@
+
+#retrieve rocky image.
+
+FROM opensuse/leap:15.5
+
+# Quartus version
+ARG QVER="25.3.1"
+ARG QBVER="100"
+
+# set locale 
+#ENV DEBIAN_FRONTEND=noninteractive \
+#    LANG=C.UTF-8 \
+#    LC_ALL=C.UTF-8
+
+# Refresh metadata & apply updates (non-interactive)
+RUN zypper -n refresh && \
+    zypper -n update
+
+# Install packages with no "recommended" weak deps (DNF's install_weak_deps=False)
+# - X11/xterm & basic GUI libs
+# - vim, wget, CA certs
+# - 32-bit multilib toolchain & runtimes (glibc/libstdc++/libgcc) + -devel variants
+# Notes:
+#   * glibc/libstdc++/libgcc 32-bit names end with `-32bit` on SUSE
+#   * libstdc++ runtime is `libstdc++6` on SUSE
+RUN zypper -n install --no-recommends \
+      xterm glib2 \
+      vim \
+      wget \
+      ca-certificates \
+      gcc gcc-c++ \
+      glibc-32bit glibc-devel-32bit \
+      libstdc++6-32bit libstdc++-devel-32bit \
+      libgcc_s1-32bit \
+      gzip \
+  && zypper -n clean --all
+
+# Refresh consolidated CA bundle (SUSE uses update-ca-certificates)
+RUN update-ca-certificates
+
+# Get installer
+ARG QINST=qinst-linux-${QVER}-${QBVER}.run
+RUN wget https://downloads.intel.com/akdlm/software/acdsinst/${QVER}/${QBVER}/qinst/${QINST} && \
+chmod +x ${QINST}
+
+## extract installer
+ARG INST_LOC="/opt/altera_inst"
+RUN mkdir -p ${INST_LOC} && ./${QINST} --target ${INST_LOC} --noexec
+
+# install Questa FPGA version (combine with above step later)
+#RUN ${INST_LOC}/qinst.sh --cli --download-dir ./qdownload --delete-downloads --components questa_fe --auto-install --install-dir /opt/questa --accept-eula
