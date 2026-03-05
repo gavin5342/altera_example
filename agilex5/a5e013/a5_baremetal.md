@@ -1,4 +1,4 @@
-# Agilex 5 103B baremetal example
+# Agilex 5 013B baremetal example
 
 These instructions are based on those for the 065 premium dev kit: [baremetal example](https://altera-fpga.github.io/rel-25.1/baremetal-embedded/agilex-5/e-series/premium/ug-baremetal-agx5e-premium/)
 
@@ -136,7 +136,11 @@ NB `flash_loader` does _not_ change the fpga configuration sof file.  It just te
 
 The Quartus programmer, `quartus_pgm` can be used to configure the FPGA through JTAG and program an attached flash device eg
 
-`quartus_pgm -c 1 -m jtag -o "p;hps_ghrd_hello.sof@2"` where `p` = program, `@2` is the second device in JTAG chain.
+`quartus_pgm -c 1 -m jtag -o "p;hps_ghrd_hello.sof@2"` where `p` = program, `@2` is the second device in JTAG chain, `-c` is programming cable 1.
+
+The FPGA can be configured so that the ARM coresight is muxed into the JTAG chain or not.  Select `@2` only when the coresight is muxed in.  If you have more than 1 cable you may need to change the `-c` argument.
+
+To list every cable and the JTAG chain for each, run `jtagconfig -d`
 
 The same functionality is available through the Tools -> Programmer... in the Quartus GUI
 
@@ -161,19 +165,24 @@ _USB-Blaster-2 is right for both II and III_
 3. C/C++ -> C/C++ Project
 4. Empty or Existing CMake Project
 5. Browse to the baremetal-example folder that you created
-2. Go to Run -> Debug Configurations
-3. Click the Ashling Hetrogeneous Multicore Hardware Debugging item
-4. Click the New Configuration button
-5. In the device tab:
-	1. select the debug probe (AG5C_SoC_DK)
-	2. Press Auto-detect Scan Chain
-	3. Click the core to debug ie 0-Cortex-A55
-	4. In the Cortex-A55 core configuration section, click Target Application
-	5. Click Add
-	6. Browse to .elf you have built
-	7. Press Apply to save the launch config
-	8. Press Debug to connect and debug
-	
+6. Repeat steps 3-5 for baremetal-drivers
+7. right click baremetal-example project
+   1. click Properties
+   2. click Project References
+   3. tick baremetal-drivers
+8. Go to Run -> Debug Configurations
+9. Click the Ashling Hetrogeneous Multicore Hardware Debugging item
+10. Click the New Configuration button
+11. In the device tab:
+   1. select the debug probe (AG5C_SoC_DK)
+   2. Press Auto-detect Scan Chain
+   3. Click the core to debug ie 0-Cortex-A55
+   4. In the Cortex-A55 core configuration section, click Target Application
+   5. Click Add
+   6. Browse to .elf you have built
+   7. Press Apply to save the launch config
+   8. Press Debug to connect and debug
+
 ### Not configured in example
 1. Clocks are not configured.  They are left in boot-mode
 1. Exceptions are not configured
