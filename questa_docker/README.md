@@ -23,3 +23,6 @@ Rocky is a downstream rebuild of Red Hat Enterprise Linux with Red Hat IP remove
  - `source build_image_rocky9.sh` builds a new image using Rocky 9 and Questa FPGA edition 25.3.1
  - `source run_new_container_rocky9.sh` runs the image you build above in a new container 
 
+## Leap 15
+
+OpenSUSE Leap is compatible with SUSE Linux Enterprise / SLES.  More info [here](https://www.suse.com/topics/definition/opensuse-leap/)
