@@ -16,6 +16,9 @@ ARG QBVER="100"
 RUN zypper -n refresh && \
     zypper -n update
 
+# change to bash
+RUN rm /bin/sh && ln -s /usr/bin/bash /bin/sh
+
 # Install packages with no "recommended" weak deps (DNF's install_weak_deps=False)
 # - X11/xterm & basic GUI libs
 # - vim, wget, CA certs
@@ -28,15 +31,19 @@ RUN zypper -n install --no-recommends \
       vim \
       wget \
       ca-certificates \
-      gcc gcc-c++ \
+      gcc gcc-c++ glib2 glib2-tools libglib-2_0-0 \
       glibc-32bit glibc-devel-32bit \
       libstdc++6-32bit libstdc++-devel-32bit \
       libgcc_s1-32bit \
       gzip \
+      coreutils bash gawk grep sed tar gzip xz \
   && zypper -n clean --all
 
 # Refresh consolidated CA bundle (SUSE uses update-ca-certificates)
 RUN update-ca-certificates
+
+# add compatibility link to libgthread
+RUN ln -s /usr/lib64/libglib-2.0.so.0 /usr/lib64/libgthread-2.0.so.0 && ldconfig
 
 # Get installer
 ARG QINST=qinst-linux-${QVER}-${QBVER}.run
@@ -48,4 +55,4 @@ ARG INST_LOC="/opt/altera_inst"
 RUN mkdir -p ${INST_LOC} && ./${QINST} --target ${INST_LOC} --noexec
 
 # install Questa FPGA version (combine with above step later)
-#RUN ${INST_LOC}/qinst.sh --cli --download-dir ./qdownload --delete-downloads --components questa_fe --auto-install --install-dir /opt/questa --accept-eula
+RUN ${INST_LOC}/qinst.sh --cli --download-dir ./qdownload --delete-downloads --components questa_fe --auto-install --install-dir /opt/questa --accept-eula
