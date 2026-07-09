@@ -1,0 +1,78 @@
+	component axi4_sub_wide is
+		generic (
+			ADDR_WIDTH                     : integer := 20;
+			DATA_WIDTH                     : integer := 256;
+			ID_WIDTH                       : integer := 5;
+			USER_WIDTH                     : integer := 32;
+			RD_ACCEPTANCE_CAPABILITY       : integer := 16;
+			WR_ACCEPTANCE_CAPABILITY       : integer := 16;
+			COMBINED_ACCEPTANCE_CAPABILITY : integer := 16;
+			USE_AWREGION                   : integer := 1;
+			USE_AWLOCK                     : integer := 1;
+			USE_AWCACHE                    : integer := 1;
+			USE_AWQOS                      : integer := 1;
+			USE_AWPROT                     : integer := 1;
+			USE_WLAST                      : integer := 1;
+			USE_BRESP                      : integer := 1;
+			USE_ARREGION                   : integer := 1;
+			USE_ARLOCK                     : integer := 1;
+			USE_ARCACHE                    : integer := 1;
+			USE_ARQOS                      : integer := 1;
+			USE_ARPROT                     : integer := 1;
+			USE_RRESP                      : integer := 1;
+			USE_AWUSER                     : integer := 1;
+			USE_ARUSER                     : integer := 1;
+			USE_WUSER                      : integer := 1;
+			USE_RUSER                      : integer := 1;
+			USE_BUSER                      : integer := 1
+		);
+		port (
+			awlen    : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- awlen
+			awsize   : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awsize
+			awburst  : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- awburst
+			awvalid  : in  std_logic                      := 'X';             -- awvalid
+			awlock   : in  std_logic                      := 'X';             -- awlock
+			awregion : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- awregion
+			awprot   : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- awprot
+			awready  : out std_logic;                                         -- awready
+			arlen    : in  std_logic_vector(7 downto 0)   := (others => 'X'); -- arlen
+			arsize   : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arsize
+			arburst  : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- arburst
+			arvalid  : in  std_logic                      := 'X';             -- arvalid
+			arlock   : in  std_logic                      := 'X';             -- arlock
+			arregion : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- arregion
+			awcache  : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- awcache
+			awqos    : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- awqos
+			arprot   : in  std_logic_vector(2 downto 0)   := (others => 'X'); -- arprot
+			arready  : out std_logic;                                         -- arready
+			rvalid   : out std_logic;                                         -- rvalid
+			rlast    : out std_logic;                                         -- rlast
+			rresp    : out std_logic_vector(1 downto 0);                      -- rresp
+			rready   : in  std_logic                      := 'X';             -- rready
+			wvalid   : in  std_logic                      := 'X';             -- wvalid
+			wlast    : in  std_logic                      := 'X';             -- wlast
+			wready   : out std_logic;                                         -- wready
+			bresp    : out std_logic_vector(1 downto 0);                      -- bresp
+			bvalid   : out std_logic;                                         -- bvalid
+			bready   : in  std_logic                      := 'X';             -- bready
+			arcache  : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- arcache
+			arqos    : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- arqos
+			awaddr   : in  std_logic_vector(19 downto 0)  := (others => 'X'); -- awaddr
+			awid     : in  std_logic_vector(4 downto 0)   := (others => 'X'); -- awid
+			awuser   : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- awuser
+			araddr   : in  std_logic_vector(19 downto 0)  := (others => 'X'); -- araddr
+			arid     : in  std_logic_vector(4 downto 0)   := (others => 'X'); -- arid
+			aruser   : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- aruser
+			ruser    : out std_logic_vector(31 downto 0);                     -- ruser
+			wuser    : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- wuser
+			buser    : out std_logic_vector(31 downto 0);                     -- buser
+			rdata    : out std_logic_vector(255 downto 0);                    -- rdata
+			rid      : out std_logic_vector(4 downto 0);                      -- rid
+			wdata    : in  std_logic_vector(255 downto 0) := (others => 'X'); -- wdata
+			wstrb    : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- wstrb
+			bid      : out std_logic_vector(4 downto 0);                      -- bid
+			clk      : in  std_logic                      := 'X';             -- clk
+			rstn     : in  std_logic                      := 'X'              -- reset_n
+		);
+	end component axi4_sub_wide;
+

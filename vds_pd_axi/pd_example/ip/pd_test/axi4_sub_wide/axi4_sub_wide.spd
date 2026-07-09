@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="sim/axi4_sub_wide.v"
+   type="VERILOG"
+   library="axi4_sub_wide"
+   hasInlineConfiguration="true" />
+ <topLevel name="axi4_sub_wide.axi4_sub_wide" />
+ <deviceFamily name="agilex5" />
+ <device name="A5EC065BB23AE6S" />
+</simPackage>

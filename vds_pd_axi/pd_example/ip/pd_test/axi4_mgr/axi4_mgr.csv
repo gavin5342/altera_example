@@ -1,0 +1,17 @@
+# system info axi4_mgr on 2026.06.24.12:33:36
+system_info:
+name,value
+DEVICE,A5EC065BB23AE6S
+DEVICE_FAMILY,Agilex 5
+GENERATION_ID,0
+#
+#
+# Files generated for axi4_mgr on 2026.06.24.12:33:36
+files:
+filepath,kind,attributes,module,is_top
+sim/axi4_mgr.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,axi4_mgr,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+axi4_mgr.axi4_mgr,altera_axi4_mm_manager

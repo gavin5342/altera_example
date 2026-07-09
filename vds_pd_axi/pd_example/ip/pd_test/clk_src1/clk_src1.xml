@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2026.06.24.08:51:15"
+ outputDirectory="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5EC065BB23AE6S"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="default"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="1000000000" />
+   <property name="clockRateKnown" value="true" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="output" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="clk_src1" version="1.0" name="clk_src1">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5EC065BB23AE6S" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="AUTO_BOARD" value="default" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/synth/clk_src1.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/synth/clk_src1.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_archive_5/acds/26.1/110/linux64/ip/altera/sopc_builder_ip/verification/altera_avalon_clock_source/altera_avalon_clock_source_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="clk_src1">"Generating: clk_src1"</message>
+   <message level="Info" culprit="clk_src1">"Generating: altera_avalon_clock_source"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_avalon_clock_source"
+   version="19.1"
+   name="altera_avalon_clock_source">
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/altera_avalon_clock_source_191/synth/verbosity_pkg.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/altera_avalon_clock_source_191/synth/altera_avalon_clock_source.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/altera_avalon_clock_source_191/synth/verbosity_pkg.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/psg_data_14/glofts/dp_pd/ip/pd_test/clk_src1/altera_avalon_clock_source_191/synth/altera_avalon_clock_source.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_archive_5/acds/26.1/110/linux64/ip/altera/sopc_builder_ip/verification/altera_avalon_clock_source/altera_avalon_clock_source_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="clk_src1" as="clk_src1" />
+  <messages>
+   <message level="Info" culprit="clk_src1">"Generating: altera_avalon_clock_source"</message>
+  </messages>
+ </entity>
+</deploy>
