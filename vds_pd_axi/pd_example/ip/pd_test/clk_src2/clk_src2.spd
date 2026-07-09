@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_avalon_clock_source_191/sim/verbosity_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_verbosity_pkg" />
+ <file
+   path="altera_avalon_clock_source_191/sim/altera_avalon_clock_source.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_avalon_clock_source_191" />
+ <file
+   path="sim/clk_src2.v"
+   type="VERILOG"
+   library="clk_src2"
+   hasInlineConfiguration="true" />
+ <topLevel name="clk_src2.clk_src2" />
+ <deviceFamily name="agilex5" />
+ <device name="A5EC065BB23AE6S" />
+</simPackage>

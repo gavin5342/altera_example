@@ -6,6 +6,8 @@ There is more documentation at:
  - [dockerdocs get started](https://docs.docker.com/get-started/)
  - [docker 101 tutorial](https://www.docker.com/101-tutorial/)
 
+I have created some Dockerfiles to make a Questa+Quartus image in various Linux distributions [here](./questa_docker)
+
 ## Why docker for FPGA development?
 
 The reasons for docker for FPGA tools are the same as other use cases, but FPGA tools can be particuarly sensitive to:

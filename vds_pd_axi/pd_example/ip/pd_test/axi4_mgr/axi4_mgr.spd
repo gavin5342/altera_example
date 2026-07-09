@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="sim/axi4_mgr.v"
+   type="VERILOG"
+   library="axi4_mgr"
+   hasInlineConfiguration="true" />
+ <topLevel name="axi4_mgr.axi4_mgr" />
+ <deviceFamily name="agilex5" />
+ <device name="A5EC065BB23AE6S" />
+</simPackage>

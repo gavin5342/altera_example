@@ -1,0 +1,19 @@
+# system info rst_src on 2026.06.24.12:33:32
+system_info:
+name,value
+DEVICE,A5EC065BB23AE6S
+DEVICE_FAMILY,Agilex 5
+GENERATION_ID,0
+#
+#
+# Files generated for rst_src on 2026.06.24.12:33:32
+files:
+filepath,kind,attributes,module,is_top
+sim/rst_src.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,rst_src,true
+altera_avalon_reset_source_191/sim/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_reset_source,false
+altera_avalon_reset_source_191/sim/altera_avalon_reset_source.sv,SYSTEM_VERILOG,,altera_avalon_reset_source,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+rst_src.rst_src,altera_avalon_reset_source

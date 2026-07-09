@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnsembleReport name="axi4_sub_wide" kind="axi4_sub_wide" version="1.0" fabric="QSYS">
+ <!-- Format version 26.1 110 (Future versions may contain additional information.) -->
+ <!-- 2026.06.24.12:33:32 -->
+ <!-- A collection of modules and connections -->
+ <parameter name="AUTO_GENERATION_ID">
+  <type>java.lang.Integer</type>
+  <value>0</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>GENERATION_ID</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_UNIQUE_ID">
+  <type>java.lang.String</type>
+  <value></value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>UNIQUE_ID</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE_FAMILY">
+  <type>java.lang.String</type>
+  <value>Agilex 5</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE">
+  <type>java.lang.String</type>
+  <value>A5EC065BB23AE6S</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE_SPEEDGRADE">
+  <type>java.lang.String</type>
+  <value>6</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_SPEEDGRADE</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_BOARD">
+  <type>java.lang.String</type>
+  <value>default</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>BOARD</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_ALTERA_AXI4_SUBORDINATE_CPU_INFO_ID">
+  <type>java.lang.String</type>
+  <value></value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>CPU_INFO_ID</sysinfo_type>
+  <sysinfo_arg>altera_axi4_subordinate</sysinfo_arg>
+ </parameter>
+ <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE">
+  <type>java.lang.Long</type>
+  <value>-1</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>CLOCK_RATE</sysinfo_type>
+  <sysinfo_arg>clock_sink</sysinfo_arg>
+ </parameter>
+ <parameter name="AUTO_CLOCK_SINK_CLOCK_DOMAIN">
+  <type>java.lang.Integer</type>
+  <value>-1</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>CLOCK_DOMAIN</sysinfo_type>
+  <sysinfo_arg>clock_sink</sysinfo_arg>
+ </parameter>
+ <parameter name="AUTO_CLOCK_SINK_RESET_DOMAIN">
+  <type>java.lang.Integer</type>
+  <value>-1</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>RESET_DOMAIN</sysinfo_type>
+  <sysinfo_arg>clock_sink</sysinfo_arg>
+ </parameter>
+ <parameter name="deviceFamily">
+  <type>java.lang.String</type>
+  <value>Agilex 5</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
+ </parameter>
+ <parameter name="generateLegacySim">
+  <type>boolean</type>
+  <value>false</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>true</visible>
+  <valid>true</valid>
+ </parameter>
+ <module
+   name="axi4_sub_wide"
+   kind="altera_axi4_mm_subordinate_intf"
+   version="2024.0.1"
+   entity="altera_axi4_mm_subordinate"
+   library="altera_axi4_mm_subordinate_intf_202401"
+   path="axi4_sub_wide"
+   hpath="axi4_sub_wide"
+   className="altera_axi4_mm_subordinate_intf">
+  <!-- Describes a single module. Module parameters are
+the requested settings for a module instance. -->
+  <parameter name="ADDR_WIDTH">
+   <type>int</type>
+   <value>20</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="DATA_WIDTH">
+   <type>int</type>
+   <value>256</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="ID_WIDTH">
+   <type>int</type>
+   <value>5</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USER_WIDTH">
+   <type>int</type>
+   <value>32</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="RD_ACCEPTANCE_CAPABILITY">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="WR_ACCEPTANCE_CAPABILITY">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="COMBINED_ACCEPTANCE_CAPABILITY">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWREGION">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWLOCK">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWCACHE">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWQOS">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWPROT">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_WLAST">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_BRESP">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARREGION">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARLOCK">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARCACHE">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARQOS">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARPROT">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_RRESP">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_AWUSER">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_ARUSER">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_WUSER">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_RUSER">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="USE_BUSER">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <interface
+     name="altera_axi4_subordinate"
+     kind="altera_axi4_slave"
+     version="26.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock_sink</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>reset_sink</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="optionalAssociatedReset">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="trustzoneAware">
+    <type>boolean</type>
+    <value>true</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="wakeupSignals">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="uniqueIdSupport">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="poison">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="traceSignals">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="isTranslator">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maximumOutstandingReads">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maximumOutstandingWrites">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="maximumOutstandingTransactions">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dataCheck">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="addressCheck">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="securityAttribute">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="userData">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="readAcceptanceCapability">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="writeAcceptanceCapability">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="combinedAcceptanceCapability">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="readDataReorderingDepth">
+    <type>java.lang.Integer</type>
+    <value>1</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="bridgesToMaster">
+    <type>com.altera.entityinterfaces.IConnectionPoint</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhFeatureGuid">
+    <type>java.math.BigInteger</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhGroupId">
+    <type>java.lang.Integer</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhParameterId">
+    <type>[Ljava.lang.Integer;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhParameterName">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhParameterVersion">
+    <type>[Ljava.lang.Integer;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhParameterData">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhParameterDataLength">
+    <type>[Ljava.lang.Integer;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhFeatureMajorVersion">
+    <type>java.lang.Integer</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhFeatureMinorVersion">
+    <type>java.lang.Integer</type>
+    <value>0</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhFeatureId">
+    <type>java.lang.Integer</type>
+    <value>35</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="dfhFeatureType">
+    <type>java.lang.Integer</type>
+    <value>3</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="noNarrowTransfer">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="addressSpan">
+    <type>java.math.BigInteger</type>
+    <value>1048576</value>
+    <derived>true</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>axi4</type>
+   <span>1048576</span>
+   <isStart>false</isStart>
+   <port>
+    <name>awlen</name>
+    <direction>Input</direction>
+    <width>8</width>
+    <role>awlen</role>
+   </port>
+   <port>
+    <name>awsize</name>
+    <direction>Input</direction>
+    <width>3</width>
+    <role>awsize</role>
+   </port>
+   <port>
+    <name>awburst</name>
+    <direction>Input</direction>
+    <width>2</width>
+    <role>awburst</role>
+   </port>
+   <port>
+    <name>awvalid</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>awvalid</role>
+   </port>
+   <port>
+    <name>awlock</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>awlock</role>
+   </port>
+   <port>
+    <name>awregion</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>awregion</role>
+   </port>
+   <port>
+    <name>awprot</name>
+    <direction>Input</direction>
+    <width>3</width>
+    <role>awprot</role>
+   </port>
+   <port>
+    <name>awready</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>awready</role>
+   </port>
+   <port>
+    <name>arlen</name>
+    <direction>Input</direction>
+    <width>8</width>
+    <role>arlen</role>
+   </port>
+   <port>
+    <name>arsize</name>
+    <direction>Input</direction>
+    <width>3</width>
+    <role>arsize</role>
+   </port>
+   <port>
+    <name>arburst</name>
+    <direction>Input</direction>
+    <width>2</width>
+    <role>arburst</role>
+   </port>
+   <port>
+    <name>arvalid</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>arvalid</role>
+   </port>
+   <port>
+    <name>arlock</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>arlock</role>
+   </port>
+   <port>
+    <name>arregion</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>arregion</role>
+   </port>
+   <port>
+    <name>awcache</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>awcache</role>
+   </port>
+   <port>
+    <name>awqos</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>awqos</role>
+   </port>
+   <port>
+    <name>arprot</name>
+    <direction>Input</direction>
+    <width>3</width>
+    <role>arprot</role>
+   </port>
+   <port>
+    <name>arready</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>arready</role>
+   </port>
+   <port>
+    <name>rvalid</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>rvalid</role>
+   </port>
+   <port>
+    <name>rlast</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>rlast</role>
+   </port>
+   <port>
+    <name>rresp</name>
+    <direction>Output</direction>
+    <width>2</width>
+    <role>rresp</role>
+   </port>
+   <port>
+    <name>rready</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>rready</role>
+   </port>
+   <port>
+    <name>wvalid</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>wvalid</role>
+   </port>
+   <port>
+    <name>wlast</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>wlast</role>
+   </port>
+   <port>
+    <name>wready</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>wready</role>
+   </port>
+   <port>
+    <name>bresp</name>
+    <direction>Output</direction>
+    <width>2</width>
+    <role>bresp</role>
+   </port>
+   <port>
+    <name>bvalid</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>bvalid</role>
+   </port>
+   <port>
+    <name>bready</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>bready</role>
+   </port>
+   <port>
+    <name>arcache</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>arcache</role>
+   </port>
+   <port>
+    <name>arqos</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>arqos</role>
+   </port>
+   <port>
+    <name>awaddr</name>
+    <direction>Input</direction>
+    <width>20</width>
+    <role>awaddr</role>
+   </port>
+   <port>
+    <name>awid</name>
+    <direction>Input</direction>
+    <width>5</width>
+    <role>awid</role>
+   </port>
+   <port>
+    <name>awuser</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>awuser</role>
+   </port>
+   <port>
+    <name>araddr</name>
+    <direction>Input</direction>
+    <width>20</width>
+    <role>araddr</role>
+   </port>
+   <port>
+    <name>arid</name>
+    <direction>Input</direction>
+    <width>5</width>
+    <role>arid</role>
+   </port>
+   <port>
+    <name>aruser</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>aruser</role>
+   </port>
+   <port>
+    <name>ruser</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>ruser</role>
+   </port>
+   <port>
+    <name>wuser</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>wuser</role>
+   </port>
+   <port>
+    <name>buser</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>buser</role>
+   </port>
+   <port>
+    <name>rdata</name>
+    <direction>Output</direction>
+    <width>256</width>
+    <role>rdata</role>
+   </port>
+   <port>
+    <name>rid</name>
+    <direction>Output</direction>
+    <width>5</width>
+    <role>rid</role>
+   </port>
+   <port>
+    <name>wdata</name>
+    <direction>Input</direction>
+    <width>256</width>
+    <role>wdata</role>
+   </port>
+   <port>
+    <name>wstrb</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>wstrb</role>
+   </port>
+   <port>
+    <name>bid</name>
+    <direction>Output</direction>
+    <width>5</width>
+    <role>bid</role>
+   </port>
+  </interface>
+  <interface name="clock_sink" kind="clock_sink" version="26.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="externallyDriven">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="ptfSchematicName">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>clock</type>
+   <span>0</span>
+   <isStart>false</isStart>
+   <port>
+    <name>clk</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>clk</role>
+   </port>
+  </interface>
+  <interface name="reset_sink" kind="reset_sink" version="26.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clock_sink</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>DEASSERT</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <span>0</span>
+   <isStart>false</isStart>
+   <port>
+    <name>rstn</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset_n</role>
+   </port>
+  </interface>
+ </module>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>altera_axi4_mm_subordinate_intf</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>AXI4 Subordinate BFM</displayName>
+  <version>2024.0.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>altera_axi4_slave</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>AXI4 Subordinate</displayName>
+  <version>26.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>clock_sink</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Input</displayName>
+  <version>26.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>reset_sink</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Reset Input</displayName>
+  <version>26.1</version>
+ </plugin>
+ <reportVersion>26.1 110</reportVersion>
+ <uniqueIdentifier></uniqueIdentifier>
+</EnsembleReport>

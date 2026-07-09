@@ -1,0 +1,11 @@
+	component rst_src is
+		generic (
+			ASSERT_HIGH_RESET    : integer := 1;
+			INITIAL_RESET_CYCLES : integer := 0
+		);
+		port (
+			reset : out std_logic;        -- reset
+			clk   : in  std_logic := 'X'  -- clk
+		);
+	end component rst_src;
+
