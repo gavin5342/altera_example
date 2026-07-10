@@ -25,3 +25,24 @@ Docker also means that you can run your ci/cd on any service with runners/agents
 Overheard misconcetptions vs reality:
  - docker is like a virtual machine: A bit, but it's the same kernel as your host.  No extra processing overhead, just extra disk space for your images.
  - docker is a cloud service.  You can run docker images using cloud services, but you can keep everything on your own machines
+
+## Run docker for development
+
+When you're developing, you probably need these things
+
+- The x11 display on your host machine exported so you can use the GUI
+- share a working directory with your host machine
+- access to a floating license server (since you can't see your host machine NIC ID)
+
+Use `-e` to share environment variables and `-v` to share directories.  To run a docker container interactively with the requirements above:
+
+```
+xhost +
+docker run -it -e DISPLAY=$DISPLAY \
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+questa_fe_rocky:25.3.1_9
+export SALT_LICENSE_SERVER=<your license server>
+
+```
+
+Information on setting up a floating license server for your host PC [here](./eda_license_install.md)
