@@ -113,7 +113,7 @@ if ![info exists QSYS_SIMDIR] {
 }
 
 if ![info exists QUARTUS_INSTALL_DIR] { 
-  set QUARTUS_INSTALL_DIR "/nfs/site/disks/swbld_archive_5/acds/26.1/110/linux64/quartus/"
+  set QUARTUS_INSTALL_DIR "$env(QUARTUS_ROOTDIR)"
 }
 
 if ![info exists QUARTUS_SIM_LIB_DIR] { 
