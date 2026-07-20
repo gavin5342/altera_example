@@ -57,7 +57,14 @@ Other people work around by forcing Questa to use the gcc that comes with your O
 
 ## Run the simulation
 
-Navigate to [./pd_example/pd_test-sim/mentor](./pd_example/pd_test-sim/mentor)
+Navigate to:
+
+- [./pd_example/pd_test/sim/mentor](./pd_example/pd_test/sim/mentor) for Platform Designer 
+- [./vds_example/gen/vds/pd_test/sim/mentor](./vds_example/gen/vds/pd_test/sim/mentor) for Visual Designer Studio 
+
+_Visual Designer Studio has a nice feature of generating files in a separate folder_
+
+
 
 Run Questa ie `vsim`
 
