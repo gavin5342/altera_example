@@ -86,7 +86,7 @@ initial begin : master_ctl
 	long_rd_tr.set_araddr(0);
 	short_rd_tr.set_araddr(23'h1000);
 	long_rd_tr.set_burst_length('d31);
-	short_rd_tr.set_burst_length('d1);
+	short_rd_tr.set_burst_length('d0);
 	long_rd_tr.set_size(AXI4_BYTES_32);
 	short_rd_tr.set_size(AXI4_BYTES_4);
 	long_rd_tr.set_burst_type(BURST_TYPE_INCR);
